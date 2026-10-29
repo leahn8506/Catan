@@ -2,9 +2,9 @@
   "name": "catan-cities-knights",
   "version": "1.0.0",
   "description": "Cities & Knights Catan multiplayer app with true random dice and progress cards, styled like Catan Universe",
-  "main": "server/server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.18.2",

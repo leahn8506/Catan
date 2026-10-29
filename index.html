@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catan: Cities & Knights Universe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="lobby">
+    <h1>Catan: Cities & Knights</h1>
+    <p>True random dice & progress cards • Board game style</p>
+    <div class="panel">
+      <h2>Create Game</h2>
+      <input id="playerName" placeholder="Your name" value="Player 1">
+      <label>Players: <select id="playerCount"><option>3</option><option>4</option><option>5</option></select></label>
+      <label>Bots: <select id="botCount"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></label>
+      <button id="createBtn">Create Room</button>
+    </div>
+    <div class="panel">
+      <h2>Join Game</h2>
+      <input id="joinCode" placeholder="Room code">
+      <button id="joinBtn">Join</button>
+    </div>
+    <div id="roomInfo"></div>
+  </div>
+
+  <div id="game" class="hidden">
+    <div id="playerPanels"></div>
+    <div id="boardContainer">
+      <div id="board"></div>
+    </div>
+    <div id="controls">
+      <div id="diceArea">
+        <div id="dice"></div>
+        <button id="rollBtn">Roll Dice</button>
+      </div>
+      <div id="resources"></div>
+      <div id="log"></div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
